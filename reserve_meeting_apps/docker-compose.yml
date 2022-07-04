@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    container_name: api
+    hostname: api
+    volumes:
+      - ./api:/var/www/html
+    tty: true
+    ports:
+      - 8082:8082
+
+  web:
+    build: ./web
+    container_name: web
+    hostname: web
+    volumes:
+      - ./web:/var/www/html
+    tty: true
+    ports:
+      - 8501:8501

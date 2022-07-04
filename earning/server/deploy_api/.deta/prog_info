@@ -1,0 +1,1 @@
+{"id":"e5ff6550-b877-44bd-b70c-acb6fde4ffa3","space":25560,"runtime":"python3.9","name":"deploy_api","path":"wmch04","project":"c01goz7r","account":"144798365827","region":"ap-southeast-1","deps":["fastapi==0.78.0"],"envs":null,"public":true,"log_level":"off","cron":""}
