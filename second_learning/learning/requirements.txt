@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+sqlalchemy
+pathlib
+bcrypt
+python-multipart
+jose
+aiofiles
+pytest
