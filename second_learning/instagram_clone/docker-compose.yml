@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  api:
+    container_name: fastapi
+    build: background/
+    volumes:
+      - ./background:/var/www/html
+    ports:
+      - "9004:9004"
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 9004
+    depends_on: 
+      - db
+
+  db:
+    container_name: fastapi_db
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: fastapi_db
+      MYSQL_USER: admin
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes: 
+      - ./mysql:/var/lib/mysql
+    ports: 
+      - 33306:3306

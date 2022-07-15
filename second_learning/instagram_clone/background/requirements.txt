@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+requests
+sqlalchemy
+# パスワードハッシュ化に使用
+passlib
+bcrypt
+# パスワードハッシュ化に使用
+# ファイルアップロードに使用
+python-multipart
+aiofiles
+# ファイルアップロードに使用
+
+python-jose
+pytest
